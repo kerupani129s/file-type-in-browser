@@ -8,8 +8,25 @@ body {
 	color: #282828;
 }
 
+a {
+	text-decoration: none;
+}
+
+a[href]:hover {
+	text-decoration: underline;
+}
+
 input {
 	font: inherit;
+}
+
+.site-main {
+	padding: 0 12px;
+}
+
+.site-footer {
+	margin-top: 16px;
+	padding: 0 12px 8px;
 }
 
 /**
