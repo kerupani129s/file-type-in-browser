@@ -1,0 +1,25 @@
+/**
+ * サイト
+ */
+body {
+	margin: 0;
+	font-family: sans-serif;
+	line-height: 1.5;
+	color: #282828;
+}
+
+input {
+	font: inherit;
+}
+
+/**
+ * アプリケーション
+ */
+.file {
+	width: 100%;
+}
+
+.error {
+	font-weight: bold;
+	color: red;
+}
