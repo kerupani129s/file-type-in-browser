@@ -61,6 +61,7 @@
 
 		inputFileElement.addEventListener('change', event => {
 			const files = event.target.files;
+			if ( ! files.length ) return;
 			convertOnEvent(files);
 		});
 
