@@ -35,8 +35,3 @@ input {
 .file {
 	width: 100%;
 }
-
-.error {
-	font-weight: bold;
-	color: red;
-}
