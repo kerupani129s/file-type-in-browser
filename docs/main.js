@@ -67,6 +67,21 @@
 
 		inputFileElement.disabled = false;
 
+		// 
+		const body = document.body;
+
+		body.addEventListener('dragover', event => {
+			event.preventDefault();
+		});
+
+		body.addEventListener('drop', event => {
+			event.preventDefault();
+			const files = event.dataTransfer.files;
+			if ( ! files.length ) return;
+			inputFileElement.files = files;
+			convertOnEvent(files);
+		});
+
 	})();
 
 })();
