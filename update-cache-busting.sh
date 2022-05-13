@@ -4,9 +4,8 @@ cd "$(dirname "$0")"
 
 # 
 function openssl_md4() {
-	local -r file="$1"
 	# OpenSSL 3.0 & OpenSSL 1.1
-	openssl md4 -provider legacy "$file" 2>/dev/null || openssl md4 "$file"
+	openssl md4 -provider legacy "$@" 2>/dev/null || openssl md4 "$@"
 }
 
 function content_hash() {
