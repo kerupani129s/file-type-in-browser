@@ -2,9 +2,16 @@
 set -euoo pipefail posix
 
 # 
+function openssl_md4() {
+	local -r file="$1"
+	# OpenSSL 3.0 & OpenSSL 1.1
+	openssl md4 -provider legacy "$file" 2>/dev/null || openssl md4 "$file"
+	return 0
+}
+
 function content_hash() {
 	local -r file="$1"
-	openssl md4 "$file" | awk '{ print substr($NF, 0, 20) }'
+	openssl_md4 "$file" | awk '{ print substr($NF, 0, 20) }'
 	return 0
 }
 
