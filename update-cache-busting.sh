@@ -1,5 +1,6 @@
 #!/bin/bash
 set -euoo pipefail posix
+cd "$(dirname "$0")"
 
 # 
 function openssl_md4() {
